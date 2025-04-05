@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Work Report</title>
+  </head>
+  <body>
+    <div class="wr-wrapper">
+      <div class="col-lg-3 wr-sidebar">
+        <div class="wr-logo-container">
+          <a href=""
+            ><span class="wr-sm-logo"><i class="ri-sparkling-2-fill"></i></span
+            ><img
+              class="wr-logo"
+              src="/assets/images/WORK REPORT.AI LOGO 01 1.svg"
+              alt=""
+          /></a>
+        </div>
+        <ul class="wr-menubar">
+          <li>
+            <a href="index.html" class="wr-menu-links active"
+              ><i class="ri-dashboard-fill"></i> <span>Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="report.html" class="wr-menu-links"
+              ><i class="ri-file-chart-line"></i><span>Report</span></a
+            >
+          </li>
+
+          <li>
+            <a href="" class="wr-menu-links"
+              ><i class="ri-team-line"></i><span>Employees</span></a
+            >
+          </li>
+          <li>
+            <a href="project.html" class="wr-menu-links"
+              ><i class="ri-file-list-line"></i><span>Projects</span></a
+            >
+          </li>
+          <li>
+            <a href="" class="wr-menu-links"
+              ><i class="ri-list-check-3"></i><span>Tasks</span></a
+            >
+          </li>
+          <li>
+            <a href="" class="wr-menu-links"
+              ><i class="ri-lightbulb-flash-line"></i
+              ><span>Skills & Tools</span></a
+            >
+          </li>
+          <li>
+            <a href="" class="wr-menu-links"
+              ><i class="ri-settings-2-line"></i><span>Settings</span></a
+            >
+          </li>
+          <li>
+            <a href="" class="wr-menu-links"
+              ><i class="ri-logout-circle-line"></i><span>Log out</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-9 wr-main flex-grow-1 position-relative">
+        <nav class="container-fluid wr-top_nav position-sticky">
+          <div class="row">
+            <div class="col-2 col-lg-6">
+              <button class="wr-sidebar-toggle d-none d-lg-block btn me-1">
+                <i class="ri-side-bar-line"></i>
+              </button>
+              <span
+                ><button class="btn d-block d-lg-none wr-mob-menu">
+                  <i class="ri-menu-2-line"></i></button
+              ></span>
+            </div>
+            <div class="col-10 col-lg-6">
+              <div class="d-flex justify-content-end">
+                <form class="d-flex wr-search_container">
+                  <span class="wr-search_icon"
+                    ><i class="ri-search-line"></i
+                  ></span>
+                  <input
+                    class="form-control me-2 wr-top_navsearch"
+                    type="search"
+                    placeholder="Search anything...."
+                    aria-label="Search"
+                  />
+                </form>
+                <div class="wr-notification">
+                  <button class="btn">
+                    <i class="ri-notification-4-line"></i>
+                  </button>
+
+                  <div class="wr-notification_container">
+                    <div
+                      class="d-flex algin-items-center justify-content-between"
+                    >
+                      <span class="wr-notify_header">Notifications</span>
+                    </div>
+
+                    <ul class="wr-notification-list">
+                      <li class="wr-notify_items">
+                        You havent uploaded your daily repott in 24 hr,P1ease
+                        upload by the end of
+                      </li>
+                      <li class="wr-notify_items">
+                        You havent uploaded your daily repott in 24 hr,P1ease
+                        upload by the end of
+                      </li>
+                      <li class="wr-notify_items">
+                        You havent uploaded your daily repott in 24 hr,P1ease
+                        upload by the end of
+                      </li>
+                    </ul>
+                    <button class="wr-notify_readbtn btn">
+                      Make all as read
+                    </button>
+                  </div>
+                </div>
+                <div class="dropdown pe-4">
+                  <button
+                    class="btn wr-profile-btn p-0 dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="/assets/images/profile.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="container p-3">
+          <div class="row">
+            <div class="col-6 col-lg-3 mb-3 pe-lg-0">
+              <div class="wr-dashboard_card">
+                <h2 class="wr-dashboardcard_main-title">09</h2>
+                <p class="wr-dashboardcard_subtitle">Total projects</p>
+                <p class="wr-dashboardcard_desc">Total number of projects</p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 mb-3 pe-lg-0">
+              <div class="wr-dashboard_card">
+                <h2 class="wr-dashboardcard_main-title">12</h2>
+                <p class="wr-dashboardcard_subtitle">Total projects</p>
+                <p class="wr-dashboardcard_desc">Total number of projects</p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 mb-3 pe-lg-0">
+              <div class="wr-dashboard_card">
+                <h2 class="wr-dashboardcard_main-title">26</h2>
+                <p class="wr-dashboardcard_subtitle">Total projects</p>
+                <p class="wr-dashboardcard_desc">Total number of projects</p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+              <div class="wr-dashboard_card">
+                <h2 class="wr-dashboardcard_main-title">59</h2>
+                <p class="wr-dashboardcard_subtitle">Total projects</p>
+                <p class="wr-dashboardcard_desc">Total number of projects</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4 mb-3 pe-lg-0">
+              <div class="wr-card_container">
+                <div class="d-flex justify-content-between">
+                  <span class="wr-card_header">Overall progress</span
+                  ><select
+                    class="form-select wr-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>All</option>
+                    <option value="1">Complete</option>
+                    <option value="2">Delay</option>
+                    <option value="3">Ongoing</option>
+                  </select>
+                </div>
+                <div class="chart-container">
+                  <div class="wr-overallProgress">
+                    <span>72%</span>
+                    <p>Completed</p>
+                  </div>
+                  <canvas id="gaugeChart"></canvas>
+                  <div class="legend-container">
+                    <div class="wr-chart_state">
+                      <span>95</span>
+                      <p>Total projects</p>
+                    </div>
+                    <div class="wr-chart_state">
+                      <span class="completed">26</span>
+                      <p>Completed</p>
+                    </div>
+                    <div class="wr-chart_state">
+                      <span class="delayed">35</span>
+                      <p>Delayed</p>
+                    </div>
+                    <div class="wr-chart_state">
+                      <span class="ongoing">05</span>
+                      <p>On going</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 mb-3 pe-lg-0">
+              <div class="wr-card_container">
+                <div class="d-flex justify-content-between">
+                  <span class="wr-card_header">Task overview</span
+                  ><button class="btn"><i class="ri-more-fill"></i></button>
+                </div>
+                <div class="d-flex gap-3 my-3 mt-4 flex-wrap flex-md-nowrap">
+                  <div class="wr-task_overview-card ongoing">
+                    <div class="wr-task_icon">
+                      <i class="ri-bubble-chart-line"></i>
+                    </div>
+                    <p class="task_state">On going</p>
+                    <span>03</span>
+                  </div>
+                  <div class="wr-task_overview-card pending">
+                    <div class="wr-task_icon"><i class="ri-more-fill"></i></div>
+                    <p class="task_state">pending</p>
+                    <span>02</span>
+                  </div>
+                  <div class="wr-task_overview-card completed">
+                    <div class="wr-task_icon">
+                      <i class="ri-checkbox-line"></i>
+                    </div>
+                    <p class="task_state">Completed</p>
+                    <span>05</span>
+                  </div>
+                </div>
+                <div class="mt-5 mb-3 d-flex algin-items-center">
+                  <div class="d-flex flex-column justify-content-center">
+                    <p class="wr-card_rating">On-time Completion Rate</p>
+                    <span class="rating-percentage">95%</span>
+                  </div>
+                  <div style="width: 220px; margin: auto">
+                    <canvas id="lineChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 mb-3">
+              <div class="wr-card_container">
+                <div class="d-flex justify-content-between">
+                  <span class="wr-card_header">Emotion overview</span
+                  ><select
+                    class="form-select wr-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>This Week</option>
+                    <option value="1">Complete</option>
+                    <option value="2">Delay</option>
+                    <option value="3">Ongoing</option>
+                  </select>
+                </div>
+                <div class="d-flex justify-content-between my-4">
+                  <div class="wr-emotional_graph">
+                    <canvas id="multiSeriesPieChart"></canvas>
+                    <div id="emoji" class="wr-emoji">😊</div>
+                  </div>
+
+                  <div class="wr-emotional_cardcontent">
+                    <span>97%</span>
+                    <p>Happy in this week</p>
+                  </div>
+                </div>
+                <div class="wr-emotion_overview">
+                  <div class="wr-emotion_overview-content">
+                    <div class="d-flex align-items-center gap-1 mb-2">
+                      <div class="wr-emtional_label"></div>
+                      <span>Happy</span>
+                    </div>
+                    <h4>26</h4>
+                  </div>
+                  <div class="wr-emotion_overview-content">
+                    <div class="d-flex align-items-center gap-1 mb-2">
+                      <div class="wr-emtional_label wr-emtional-neutral"></div>
+                      <span>Neutral</span>
+                    </div>
+
+                    <h4>09</h4>
+                  </div>
+                  <div class="wr-emotion_overview-content">
+                    <div class="d-flex align-items-center gap-1 mb-2">
+                      <div class="wr-emtional_label wr-emtional-negative"></div>
+                      <span>Negative</span>
+                    </div>
+
+                    <h4>03</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-7 col-xl-9 mb-3 pe-lg-0">
+              <div class="wr-card_container">
+                <div class="d-flex justify-content-between">
+                  <span class="wr-card_header">Task </span>
+                  <div class="d-flex">
+                    <form class="d-flex wr-search_container">
+                      <span class="wr-search_icon"
+                        ><i class="ri-search-line"></i
+                      ></span>
+                      <input
+                        class="form-control me-2 wr-top_navsearch"
+                        type="search"
+                        placeholder="Search anything...."
+                        aria-label="Search"
+                      />
+                    </form>
+                    <select
+                      class="form-select wr-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Sort By</option>
+                      <option value="1">Complete</option>
+                      <option value="2">Delay</option>
+                      <option value="3">Ongoing</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="wr-table_container my-5 overflow-y-auto">
+                  <table class="w-100 wr-table">
+                    <tr>
+                      <th>S.No</th>
+                      <th>Task Title</th>
+                      <th>Project</th>
+                      <th>Assigned Team</th>
+                      <th>Complexity</th>
+                      <th>Progress</th>
+                      <th>Status</th>
+                      <th>Due Date</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>cyllo ai</td>
+                      <td>cyllo</td>
+                      <td>
+                        <div class="wr-team-group">
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-1.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-2.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-3.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <div class="wr-profiles">+6</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="complexity-high">High</span></td>
+                      <td>
+                        <div class="progress-bar">
+                          <div class="label" data-count="30">100%</div>
+                          <div class="line" style="width: 100px">
+                            <span class="inprogress"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="in-progress">Inprogress</span></td>
+                      <td><span class="text-nowrap">25-08-2024</span></td>
+                    </tr>
+                    <tr>
+                      <td><span>2</span></td>
+                      <td><span class="text-nowrap">cyllo ai</span></td>
+                      <td><span>cyllo</span></td>
+                      <td>
+                        <div class="wr-team-group">
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-1.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-2.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-3.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <div class="wr-profiles">+6</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="complexity-low">Low</span></td>
+                      <td>
+                        <div class="progress-bar">
+                          <div class="label" data-count="5">100%</div>
+                          <div class="line" style="width: 100px">
+                            <span class="pending"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="in-progress pending">Inprogress</span>
+                      </td>
+                      <td><span class="wr-due_date-over">25-08-2024</span></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>cyllo ai</td>
+                      <td>cyllo</td>
+                      <td>
+                        <div class="wr-team-group">
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-1.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-2.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-3.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <div class="wr-profiles">+6</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="complexity-high">High</span></td>
+                      <td>
+                        <div class="progress-bar">
+                          <div class="label" data-count="30">100%</div>
+                          <div class="line" style="width: 100px">
+                            <span class="inprogress"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="in-progress">Inprogress</span></td>
+                      <td>25-08-2024</td>
+                    </tr>
+                    <tr>
+                      <td><span>4</span></td>
+                      <td><span>cyllo ai</span></td>
+                      <td><span>cyllo</span></td>
+                      <td>
+                        <div class="wr-team-group">
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-1.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-2.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-3.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <div class="wr-profiles">+6</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="complexity-low">Low</span></td>
+                      <td>
+                        <div class="progress-bar">
+                          <div class="label" data-count="5">100%</div>
+                          <div class="line" style="width: 100px">
+                            <span class="pending"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="in-progress">Inprogress</span></td>
+                      <td><span>25-08-2024</span></td>
+                    </tr>
+                    <tr>
+                      <td><span>5</span></td>
+                      <td><span>cyllo ai</span></td>
+                      <td><span>cyllo</span></td>
+                      <td>
+                        <div class="wr-team-group">
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-1.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-2.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-3.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <div class="wr-profiles">+6</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="complexity-low">Low</span></td>
+                      <td>
+                        <div class="progress-bar">
+                          <div class="label" data-count="60">100%</div>
+                          <div class="line" style="width: 100px">
+                            <span class="pending"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="in-progress pending">Pending</span>
+                      </td>
+                      <td><span>25-08-2024</span></td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>cyllo ai</td>
+                      <td>cyllo</td>
+                      <td>
+                        <div class="wr-team-group">
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-1.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-2.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <img
+                              src="/assets/images/dashboard/profile-3.jpg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="wr-profile">
+                            <div class="wr-profiles">+6</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="complexity-high">High</span></td>
+                      <td>
+                        <div class="progress-bar">
+                          <div class="label" data-count="30">100%</div>
+                          <div class="line" style="width: 100px">
+                            <span class="inprogress"></span>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="in-progress">Inprogress</span></td>
+                      <td>25-08-2024</td>
+                    </tr>
+                  </table>
+                </div>
+                <nav aria-label="Page navigation ">
+                  <ul class="pagination wr-pagination">
+                    <li class="page-item">
+                      <a class="page-link active" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-md-5 col-xl-3 mb-3">
+              <div class="wr-card_container">
+                <div class="d-flex justify-content-between">
+                  <span class="wr-card_header">Task Summary</span>
+                  <div class="d-flex">
+                    <select
+                      class="form-select wr-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Cyllo ai</option>
+                      <option value="1">Complete</option>
+                      <option value="2">Delay</option>
+                      <option value="3">Ongoing</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <div class="wr-overallProgress">
+                    <span>50hr</span>
+                    <p>cyllo ai</p>
+                  </div>
+                  <canvas id="semiDoughnut" width="300"></canvas>
+                </div>
+                <div class="wr-report_summary">
+                  <div class="wr-report_summary_title">
+                    <span> Report summary </span
+                    ><button class="btn wr-summary_audio p-0">
+                      <i class="ri-volume-up-line"></i>
+                    </button>
+                  </div>
+                  <p class="wr-summary_note">
+                    A study on tracking progress, priority, category,
+                    deadliness, and effort from project reports tracking
+                    progress, priority, category, tracking progress, oject
+                    reports trackingtracking progress, priority, category,
+                    tracking progress, oject study on A study on tracking
+                    progress, priority,
+                  </p>
+                  <div class="wr-summary_pagination">
+                    <button class="btn p-0">
+                      <i class="ri-arrow-right-double-fill"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 mb-3 pe-lg-0">
+              <div class="wr-card_container">
+                <div class="d-flex justify-content-between">
+                  <span class="wr-card_header">Project progress</span>
+                </div>
+                <div class="my-4">
+                  <div class="wr-progress_container">
+                    <p class="wr-project_name mb-0">cyllo</p>
+                    <div class="progress-bar">
+                      <div
+                        class="label d-flex justify-content-end"
+                        data-count="70"
+                      ></div>
+                      <div class="line" style="width: 100%">
+                        <span class="almost"></span>
+                      </div>
+                    </div>
+                    <div class="wr-progress_count">
+                      <i class="ri-checkbox-line"></i><span>32/40</span>
+                    </div>
+                  </div>
+                  <div class="wr-progress_container">
+                    <p class="wr-project_name mb-0">Horila</p>
+                    <div class="progress-bar">
+                      <div
+                        class="label d-flex justify-content-end"
+                        data-count="40"
+                      ></div>
+                      <div class="line" style="width: 100%">
+                        <span class="medium"></span>
+                      </div>
+                    </div>
+                    <div class="wr-progress_count">
+                      <i class="ri-checkbox-line"></i><span>5/25</span>
+                    </div>
+                  </div>
+                  <div class="wr-progress_container">
+                    <p class="wr-project_name mb-0">cyllo ai</p>
+                    <div class="progress-bar">
+                      <div
+                        class="label d-flex justify-content-end"
+                        data-count="20"
+                      ></div>
+                      <div class="line" style="width: 100%">
+                        <span class="pending"></span>
+                      </div>
+                    </div>
+                    <div class="wr-progress_count">
+                      <i class="ri-checkbox-line"></i><span>12/30</span>
+                    </div>
+                  </div>
+                  <div class="wr-progress_container">
+                    <p class="wr-project_name mb-0">Horila dashboard</p>
+                    <div class="progress-bar">
+                      <div
+                        class="label d-flex justify-content-end"
+                        data-count="12"
+                      ></div>
+                      <div class="line" style="width: 100%">
+                        <span class="started"></span>
+                      </div>
+                    </div>
+                    <div class="wr-progress_count">
+                      <i class="ri-checkbox-line"></i><span>8/40</span>
+                    </div>
+                  </div>
+
+                  <nav aria-label="Page navigation ">
+                    <ul class="pagination wr-pagination">
+                      <li class="page-item">
+                        <a class="page-link active" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-3 pe-lg-0">
+              <div class="wr-card_container">
+                <div class="d-flex justify-content-between">
+                  <span class="wr-card_header">Weekly report Overview</span>
+                  <div class="d-flex">
+                    <select
+                      class="form-select wr-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>This week</option>
+                      <option value="1">Last month</option>
+                      <option value="2">Delay</option>
+                      <option value="3">Ongoing</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="my-4 d-flex flex-column justify-content-center">
+                  <canvas
+                    id="stackedBarLineChart"
+                    width="160"
+                    height="106"
+                  ></canvas>
+                  <div class="wr-weekly_report-overview">
+                    <h4>30%</h4>
+                    <span
+                      >Employess performance is 30% better compare to last
+                      month</span
+                    >
+                  </div>
+                  <div class="wr-summary_pagination">
+                    <button class="btn p-0">
+                      <i class="ri-arrow-right-double-fill"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+              <div class="row h-100">
+                <div class="col-12 mb-3">
+                  <div class="wr-card_container">
+                    <div class="d-flex justify-content-between">
+                      <span class="wr-card_header">Most used skills</span>
+                    </div>
+                    <div class="wr-skill_graph-container">
+                      <canvas
+                        id="mostUsedSkillsChart"
+                        width="100%"
+                        height="100"
+                      ></canvas>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="wr-card_container">
+                    <div class="d-flex justify-content-between">
+                      <span class="wr-card_header">Most used tools</span>
+                    </div>
+                    <div class="wr-skill_graph-container">
+                      <canvas
+                        id="mostUsedtoolChart"
+                        width="100"
+                        height="100"
+                        style="width: 100%; height: 100px"
+                      ></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 mb-3 pe-lg-0">
+              <div class="wr-card_container">
+                <div class="d-flex justify-content-between">
+                  <span class="wr-card_header">Workload</span>
+                </div>
+                <div class="wr-graph_content">
+                  <canvas id="multipleBarChart"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-3 h-100">
+              <div class="wr-card_container h-100">
+                <div class="d-flex justify-content-between">
+                  <span class="wr-card_header">Weekly trend chart</span
+                  ><select
+                    class="form-select wr-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>This Week</option>
+
+                    <option value="1">Complete</option>
+                    <option value="2">Delay</option>
+                    <option value="3">Ongoing</option>
+                  </select>
+                </div>
+                <div class="wr-graph_content">
+                  <canvas
+                    id="gradientLineChart"
+                    width="100%"
+                    height="100%"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script></script>
+  </body>
+</html>

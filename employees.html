@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <title>Work Report</title>
+</head> -->
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- FullCalendar -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Work Report</title>
+</head>
+
+<body>
+    <div class="wr-wrapper">
+        <div class="col-lg-3 wr-sidebar">
+            <div class="wr-logo-container">
+                <a href=""><button class="wr-sidebar-toggle btn me-1">
+                        <i class="ri-side-bar-line"></i></button><img class="wr-logo"
+                        src="/assets/images/WORK REPORT.AI LOGO 01 1.svg" alt="" /></a>
+            </div>
+            <ul class="wr-menubar">
+                <li>
+                    <a href="index.html" class="wr-menu-links "><i class="ri-dashboard-fill"></i>
+                        <span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="report.html" class="wr-menu-links"><i
+                            class="ri-file-chart-line"></i><span>Report</span></a>
+                </li>
+                <li>
+                    <a href="employees.html" class="wr-menu-links active"><i
+                            class="ri-team-line"></i><span>Employees</span></a>
+                </li>
+                <li>
+                    <a href="project.html" class="wr-menu-links"><i
+                            class="ri-file-list-line"></i><span>Projects</span></a>
+                </li>
+                <li>
+                    <a href="" class="wr-menu-links"><i class="ri-list-check-3"></i><span>Tasks</span></a>
+                </li>
+                <li>
+                    <a href="" class="wr-menu-links"><i class="ri-lightbulb-flash-line"></i><span>Skills &
+                            Tools</span></a>
+                </li>
+                <li>
+                    <a href="" class="wr-menu-links"><i class="ri-settings-2-line"></i><span>Settings</span></a>
+                </li>
+                <li>
+                    <a href="" class="wr-menu-links"><i class="ri-logout-circle-line"></i><span>Log out</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-9 wr-main flex-grow-1 position-relative">
+            <nav class="container-fluid wr-top_nav position-sticky">
+                <div class="row">
+                    <div class="col-2 col-lg-6">
+                        <span><button class="btn d-block d-lg-none wr-mob-menu">
+                                <i class="ri-menu-2-line"></i></button></span>
+                    </div>
+                    <div class="col-10 col-lg-6">
+                        <div class="d-flex justify-content-end">
+                            <form class="d-flex wr-search_container">
+                                <span class="wr-search_icon"><i class="ri-search-line"></i></span>
+                                <input class="form-control me-2 wr-top_navsearch" type="search"
+                                    placeholder="Search anything...." aria-label="Search" />
+                            </form>
+                            <div class="wr-notification">
+                                <button class="btn">
+                                  <i class="ri-notification-4-line"></i>
+                                </button>
+              
+                                <div class="wr-notification_container">
+                                  <div
+                                    class="d-flex algin-items-center justify-content-between"
+                                  >
+                                    <span class="wr-notify_header">Notifications</span>
+                                  </div>
+              
+                                  <ul class="wr-notification-list">
+                                    <li class="wr-notify_items">
+                                      You havent uploaded your daily repott in 24 hr,P1ease
+                                      upload by the end of
+                                    </li>
+                                    <li class="wr-notify_items">
+                                      You havent uploaded your daily repott in 24 hr,P1ease
+                                      upload by the end of
+                                    </li>
+                                    <li class="wr-notify_items">
+                                      You havent uploaded your daily repott in 24 hr,P1ease
+                                      upload by the end of
+                                    </li>
+                                  </ul>
+                                  <button class="wr-notify_readbtn btn">
+                                    Make all as read
+                                  </button>
+                                </div>
+                              </div>
+                            <div class="dropdown pe-4">
+                                <button class="btn wr-profile-btn p-0 dropdown-toggle" type="button"
+                                    id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="/assets/images/profile.png" class="img-fluid" alt="" />
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+            <section>
+                <div class="table-header">
+                    <div class="filters">
+                        <button class="filter-button active">All</button>
+                        <button class="filter-button">
+                            <i class="ri-list-check-3 icon"></i> To approve
+                        </button>
+                        <button class="filter-button">
+                            <i class="ri-folder-user-line icon"></i> Achieved employees
+                        </button>
+                    </div>
+                    <div class="search-bar">
+                        <div class="search-input">
+                            <input type="text" placeholder="Search" />
+                            <i class="ri-search-2-line icon"></i>
+                        </div>
+                        <button class="filter-icon">
+                            <i class="ri-equalizer-line"></i> </button>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="employee-table">
+                        <thead>
+                            <tr>
+                                <th>Employee</th>
+                                <th>Role</th>
+                                <th>Group</th>
+                                <th>Tools</th>
+                                <th>Reports</th>
+                                <th>Tasks</th>
+                                <th>Productivity</th>
+                                <th>Active status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Row Template -->
+                            <tr>
+                                <td>
+                                    <a href="employee.html" class="employee-info">
+                                        <img src="/assets//images/profile.png" alt="Employee Image" />
+                                        <div>
+                                            <p class="name">Sophie Moore</p>
+                                            <p class="email">contact@sophiemoore.com</p>
+                                        </div>
+                </div>
+                </td>
+                <td>Developer</td>
+                <td>7</td>
+                <td>8</td>
+                <td>15</td>
+                <td>2</td>
+                <td>
+                    <span class="productivity high">Productivity - 80%</span>
+                </td>
+                <td>
+                    <label class="switch">
+                        <input type="checkbox" checked />
+                        <span class="slider"></span>
+                    </label>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="employee.html" class="employee-info">
+                            <img src="/assets//images/profile.png" alt="Employee Image" />
+                            <div>
+                                <p class="name">Sophie Moore</p>
+                                <p class="email">contact@sophiemoore.com</p>
+                            </div>
+                        </a>
+                    </td>
+                    <td>Developer</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>15</td>
+                    <td>2</td>
+                    <td>
+                        <span class="productivity low">Productivity - 40%</span>
+                    </td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider"></span>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="employee.html" class="employee-info">
+                            <img src="/assets//images/profile.png" alt="Employee Image" />
+                            <div>
+                                <p class="name">Sophie Moore</p>
+                                <p class="email">contact@sophiemoore.com</p>
+                            </div>
+        </div>
+        </td>
+        <td>Developer</td>
+        <td>7</td>
+        <td>8</td>
+        <td>15</td>
+        <td>2</td>
+        <td>
+            <span class="productivity high">Productivity - 80%</span>
+        </td>
+        <td>
+            <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+            </label>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="employee.html" class="employee-info">
+                    <img src="/assets//images/profile.png" alt="Employee Image" />
+                    <div>
+                        <p class="name">Sophie Moore</p>
+                        <p class="email">contact@sophiemoore.com</p>
+                    </div>
+    </div>
+    </td>
+    <td>Developer</td>
+    <td>7</td>
+    <td>8</td>
+    <td>15</td>
+    <td>2</td>
+    <td>
+        <span class="productivity high">Productivity - 80%</span>
+    </td>
+    <td>
+        <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+        </label>
+    </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="employee-info">
+                <img src="/assets//images/profile.png" alt="Employee Image" />
+                <div>
+                    <p class="name">Sophie Moore</p>
+                    <p class="email">contact@sophiemoore.com</p>
+                </div>
+            </div>
+        </td>
+        <td>Developer</td>
+        <td>7</td>
+        <td>8</td>
+        <td>15</td>
+        <td>2</td>
+        <td>
+            <span class="productivity high">Productivity - 80%</span>
+        </td>
+        <td>
+            <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider"></span>
+            </label>
+        </td>
+    </tr>
+    <!-- Repeat rows as needed -->
+    </tbody>
+    </table>
+    </div>
+
+
+    </section>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr('#date-range-calendar', {
+                mode: 'range',
+                dateFormat: 'd M Y',
+                inline: true,
+                locale: 'en',
+                onChange: function (selectedDates) {
+                    console.log('Selected Start Date:', selectedDates[0]);
+                    console.log('Selected End Date:', selectedDates[1]);
+                },
+            });
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+
+    <!-- Bootstrap JS -->
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

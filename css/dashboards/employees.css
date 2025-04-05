@@ -1,0 +1,106 @@
+.table-container {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+.employee-table thead {
+  background-color: #f9f9f9;
+}
+.employee-table thead th {
+  padding: 0.75rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+.employee-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+.employee-table tbody tr:hover {
+  background-color: #f4f4f4;
+}
+.employee-table tbody td {
+  padding: 0.75rem;
+  vertical-align: middle;
+}
+.employee-table tbody td .employee-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+}
+.employee-table tbody td .employee-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.employee-table tbody td .employee-info .name {
+  font-weight: 600;
+  color: #333;
+}
+.employee-table tbody td .employee-info .email {
+  font-size: 0.875rem;
+  color: #888;
+}
+.employee-table tbody td .productivity.high {
+  color: #27ae60;
+  background-color: #e8f8f5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+.employee-table tbody td .productivity.low {
+  color: #e74c3c;
+  background-color: #fdecea;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+.employee-table tbody td .switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+.employee-table tbody td .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.employee-table tbody td .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.employee-table tbody td .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.employee-table tbody td .switch input:checked + .slider {
+  background-color: #27ae60;
+}
+.employee-table tbody td .switch input:checked + .slider:before {
+  -webkit-transform: translateX(14px);
+          transform: translateX(14px);
+}

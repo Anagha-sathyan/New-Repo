@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <title>Work Report</title>
+</head>
+-->
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <!-- FullCalendar -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Work Report</title>
+</head>
+
+<body>
+  <div class="wr-wrapper">
+    <div class="col-lg-3 wr-sidebar">
+      <div class="wr-logo-container">
+        <a href=""><button class="wr-sidebar-toggle btn me-1">
+            <i class="ri-side-bar-line"></i></button><img class="wr-logo"
+            src="/assets/images/WORK REPORT.AI LOGO 01 1.svg" alt="" /></a>
+      </div>
+      <ul class="wr-menubar">
+        <li>
+          <a href="index.html" class="wr-menu-links "><i class="ri-dashboard-fill"></i> <span>Dashboard</span></a>
+        </li>
+        <li>
+          <a href="report.html" class="wr-menu-links"><i class="ri-file-chart-line"></i><span>Report</span></a>
+        </li>
+        <li>
+          <a href="employees.html" class="wr-menu-links active"><i class="ri-team-line"></i><span>Employees</span></a>
+        </li>
+        <li>
+          <a href="project.html" class="wr-menu-links"><i class="ri-file-list-line"></i><span>Projects</span></a>
+        </li>
+        <li>
+          <a href="" class="wr-menu-links"><i class="ri-list-check-3"></i><span>Tasks</span></a>
+        </li>
+        <li>
+          <a href="" class="wr-menu-links"><i class="ri-lightbulb-flash-line"></i><span>Skills & Tools</span></a>
+        </li>
+        <li>
+          <a href="" class="wr-menu-links"><i class="ri-settings-2-line"></i><span>Settings</span></a>
+        </li>
+        <li>
+          <a href="" class="wr-menu-links"><i class="ri-logout-circle-line"></i><span>Log out</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-9 wr-main flex-grow-1 position-relative">
+      <nav class="container-fluid wr-top_nav position-sticky">
+        <div class="row">
+          <div class="col-6">
+            <span><button class="btn d-block d-lg-none wr-mob-menu">
+                <i class="ri-menu-2-line"></i></button></span>
+          </div>
+          <div class="col-6">
+            <div class="d-flex justify-content-end">
+              <form class="d-flex wr-search_container">
+                <span class="wr-search_icon"><i class="ri-search-line"></i></span>
+                <input class="form-control me-2 wr-top_navsearch" type="search" placeholder="Search anything...."
+                  aria-label="Search" />
+              </form>
+              <div class="wr-notification">
+                <button class="btn">
+                  <i class="ri-notification-4-line"></i>
+                </button>
+
+                <div class="wr-notification_container">
+                  <div
+                    class="d-flex algin-items-center justify-content-between"
+                  >
+                    <span class="wr-notify_header">Notifications</span>
+                  </div>
+
+                  <ul class="wr-notification-list">
+                    <li class="wr-notify_items">
+                      You havent uploaded your daily repott in 24 hr,P1ease
+                      upload by the end of
+                    </li>
+                    <li class="wr-notify_items">
+                      You havent uploaded your daily repott in 24 hr,P1ease
+                      upload by the end of
+                    </li>
+                    <li class="wr-notify_items">
+                      You havent uploaded your daily repott in 24 hr,P1ease
+                      upload by the end of
+                    </li>
+                  </ul>
+                  <button class="wr-notify_readbtn btn">
+                    Make all as read
+                  </button>
+                </div>
+              </div>
+              <div class="dropdown pe-4">
+                <button class="btn wr-profile-btn p-0 dropdown-toggle" type="button" id="dropdownMenuButton"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="/assets/images/profile.png" class="img-fluid" alt="" />
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="container-fluid p-3">
+        <div>
+          <div class="wr-bredcrum">
+            <span class="wr-bredcrum-span1">Employee </span><span class="wr-bredcrum-span2"> /</span><span
+              class="wr-bredcrum-span3"> Anagha S</span>
+          </div>
+          <div class="row wr-first-row mt-4">
+            <div class="col-md-4 col-12">
+              <div class="wr-employee-profile ">
+
+                <div class="wr-employee-profile-div">
+                  <img src="/assets/images/profile.png" class="img-fluid" alt="" />
+                  <div class="ms-3">
+                    <h3 class="wr-employee-profile-info-name">Anagha S</h3>
+                    <div class="wr-employee-profile-info">
+                      <span class="wr-employee-profile-info-dis">Developer</span>
+                      <span class="wr-employee-profile-info-email">anagha12@gmail.com</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="wr-prof-line"></div>
+                <div class="d-flex flex-column gap-4 wr-employee-base-info">
+                  <div class="d-flex justify-content-between">
+                    <span>Total Number of Report</span>
+                    <span>10</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>Total Projects</span>
+                    <span>10</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>Tools</span>
+                    <span>10</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>Skills</span>
+                    <span>10</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-12">
+              <div class="wr-employee-info">
+                <div class="">
+                  <span class="wr-employee-info-title">Employee Information</span>
+                  <div class="mt-3">
+                    <div class="wr-profile-tabs-container">
+                      <ul class="wr-profile-tabs tab-links">
+                        <li data-tab="tab-32" class="wr-profile-tab tab-link active">
+                          <span>Team Members</span>
+                        </li>
+                        <li data-tab="tab-42" class="wr-profile-tab tab-link">
+                          <span>Skills</span>
+                        </li>
+                        <li data-tab="tab-52" class="wr-profile-tab tab-link">
+                          <span>Tools & Resources</span>
+                        </li>
+                        <li data-tab="tab-62" class="wr-profile-tab tab-link">
+                          <span>Projects</span>
+                        </li>
+                        <li data-tab="tab-72" class="wr-profile-tab tab-link">
+                          <span>Group</span>
+                        </li>
+                        <li data-tab="tab-82" class="wr-profile-tab tab-link">
+                          <span>Task</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="wr-employee-info-line">
+
+                    </div>
+                    <div id="tab-32" class="row gap-3 wr-tab-content active">
+                      <div class="wr-employee-info-prof-cards ">
+                        <div class="wr-employee-info-prof-card">
+                          <img src="/assets/images/profile.png" class="img-fluid  wr-employee-info-prof-card-img"
+                            alt="">
+                          <span class=" wr-employee-info-prof-card-name">anagha</span>
+                        </div>
+                        <div class="wr-employee-info-prof-card">
+                          <img src="/assets/images/profile.png" class="img-fluid  wr-employee-info-prof-card-img"
+                            alt="">
+                          <span class=" wr-employee-info-prof-card-name">anagha</span>
+                        </div>
+                        <div class="wr-employee-info-prof-card">
+                          <img src="/assets/images/profile.png" class="img-fluid  wr-employee-info-prof-card-img"
+                            alt="">
+                          <span class=" wr-employee-info-prof-card-name">anagha</span>
+                        </div>
+                        <div class="wr-employee-info-prof-card">
+                          <img src="/assets/images/profile.png" class="img-fluid  wr-employee-info-prof-card-img"
+                            alt="">
+                          <span class=" wr-employee-info-prof-card-name">anagha</span>
+                        </div>
+                        <div class="wr-employee-info-prof-card">
+                          <img src="/assets/images/profile.png" class="img-fluid  wr-employee-info-prof-card-img"
+                            alt="">
+                          <span class=" wr-employee-info-prof-card-name">anagha</span>
+                        </div>`
+                        <div class="wr-employee-info-prof-card">
+                          <img src="/assets/images/profile.png" class="img-fluid  wr-employee-info-prof-card-img"
+                            alt="">
+                          <span class=" wr-employee-info-prof-card-name">anagha</span>
+                        </div>
+                        <div class="wr-employee-info-prof-card">
+                          <img src="/assets/images/profile.png" class="img-fluid  wr-employee-info-prof-card-img"
+                            alt="">
+                          <span class=" wr-employee-info-prof-card-name">anagha</span>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <div id="tab-42" class="row gap-3 wr-tab-content">
+                      <div class="wr-employee-info-prof-cards ">
+                        <div class="wr-employee-info-prof-card">
+                          <img src="/assets/images/profile.png" class="img-fluid  wr-employee-info-prof-card-img"
+                            alt="">
+                          <span class=" wr-employee-info-prof-card-name">anagha</span>
+                        </div>
+                        <div class="wr-employee-info-prof-card">
+                          <img src="/assets/images/profile.png" class="img-fluid  wr-employee-info-prof-card-img"
+                            alt="">
+                          <span class=" wr-employee-info-prof-card-name">anagha</span>
+                        </div>
+                        <div class="wr-employee-info-prof-card">
+                          <img src="/assets/images/profile.png" class="img-fluid  wr-employee-info-prof-card-img"
+                            alt="">
+                          <span class=" wr-employee-info-prof-card-name">anagha</span>
+                        </div>
+                        <div class="wr-employee-info-prof-card">
+                          <img src="/assets/images/profile.png" class="img-fluid  wr-employee-info-prof-card-img"
+                            alt="">
+                          <span class=" wr-employee-info-prof-card-name">anagha</span>
+                        </div>
+                        <div class="wr-employee-info-prof-card">
+                          <img src="/assets/images/profile.png" class="img-fluid  wr-employee-info-prof-card-img"
+                            alt="">
+                          <span class=" wr-employee-info-prof-card-name">anagha</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wr-employee-attendance wr-sec-row row mt-4 mx-auto">
+            <div class="mb-4 mt-3">
+              <span class="wr-employee-info-title">Attendance</span>
+            </div>
+            <div class=" col-md-4 col-12">
+              <div class="calendar">
+                <!-- <div id="date-range-calendar"></div> -->
+                <div id="calendar" class="wr-calendar"></div>
+
+              </div>
+
+            </div>
+            <div class="col-md-8 col-12">
+              <div class="wr-employee-attendance-rate">
+                <span class="wr-employee-attendance-rate-num">26.8%</span>
+                <span class="wr-employee-attendance-rate-text">Attendance Rate</span>
+              </div>
+              <div class="wr-employee-attendance-schedule mt-4">
+                <div>
+                  <span class="wr-employee-attendance-schedule-date">Nov 30</span>
+                  <span class="wr-employee-attendance-schedule-title">Add Forgot password option when login & send email
+                    to reset password</span>
+                </div>
+                <div>
+                  <span class="wr-employee-attendance-schedule-task">Task Management: A study on tracking progress,
+                    priority, category, deadliness, and effort from
+                    project reports tracking progress, priority, category, tracking progress, priority....Task
+                    Management: A study onTask Management: A study on tracking progress, priority, category, deadliness,
+                    and effort from project reports tracking progress, priority, category, tracking progress,
+                    priority.</span>
+                </div>
+                <div class="wr-employee-attendance-schedule-play">
+                  <span class="wr-employee-attendance-schedule-play-button">
+                    <img src="/assets/images/employee-dash/play-button-white.svg" alt="">
+                  </span>
+                  <div class="wr-employee-attendance-schedule-play-line">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="wr-task-overview mt-4 ">
+            <span class="wr-employee-info-title">Employee Information</span>
+            <div class="wr-grid-2 mt-4">
+              <div class="wr-task-overview-tasks">
+                <span class="wr-task-overview-tasks-title">Development Summary</span>
+                <ul class="wr-task-overview-tasks-dis">
+                  <li>Lorem, ipsum dolor: sit amet consectetur adipisicing elit. Adipisci inventore ea eum, laborum a
+                    aliquam voluptatem, dolore qui placeat modi alias suscipit recusandae at numquam expedita distinctio
+                    illum? Numquam, cum.</li>
+                </ul>
+              </div>
+              <div class="wr-task-overview-tasks">
+                <span class="wr-task-overview-tasks-title">Development Summary</span>
+                <ul class="wr-task-overview-tasks-dis">
+                  <li>Lorem, ipsum dolor: sit amet consectetur adipisicing elit. Adipisci inventore ea eum, laborum a
+                    aliquam voluptatem, dolore qui placeat modi alias suscipit recusandae at numquam expedita distinctio
+                    illum? Numquam, cum.</li>
+                </ul>
+              </div>
+              <div class="wr-task-overview-tasks">
+                <span class="wr-task-overview-tasks-title">Development Summary</span>
+                <ul class="wr-task-overview-tasks-dis">
+                  <li>Lorem, ipsum dolor: sit amet consectetur adipisicing elit. Adipisci inventore ea eum, laborum a
+                    aliquam voluptatem, dolore qui placeat modi alias suscipit recusandae at numquam expedita distinctio
+                    illum? Numquam, cum.</li>
+                </ul>
+              </div>
+              <div class="wr-task-overview-tasks">
+                <span class="wr-task-overview-tasks-title">Development Summary</span>
+                <ul class="wr-task-overview-tasks-dis">
+                  <li>Lorem, ipsum dolor: sit amet consectetur adipisicing elit. Adipisci inventore ea eum, laborum a
+                    aliquam voluptatem, dolore qui placeat modi alias suscipit recusandae at numquam expedita distinctio
+                    illum? Numquam, cum.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row  wr-first-row mt-4">
+            <div class="col-md-9 col-12">
+              <div class="wr-performance-container">
+                <span class="wr-employee-info-title">Employee Information</span>
+                <div class="wr-performance-container-labels">
+                  <span class="wr-performance-container-title">Response rate over time</span>
+                  <div class="wr-performance-container-label">
+                    <span class="wr-performance-container-label-name">
+                      Total Report</span>
+                    <div class="wr-performance-container-label-point"></div>
+                  </div>
+                </div>
+                <canvas id="performanceChart"></canvas>
+              </div>
+            </div>
+            <div class="col-md-3 col-12">
+              <div class="wr-communication-container">
+                <span class="wr-employee-info-title"><img src="/assets/images/employee-dash/txtvsaudio.svg" alt="">Text
+                  v/s Audio Communication</span>
+                <div class="wr-communication-container-chart">
+                  <div class="wr-communication-container-chart-div">
+                    <canvas id="communicationChart"></canvas>
+                    <div class="percentage">
+                      <span class="percent">87%</span>
+                      <span class="label">Audio</span>
+                    </div>
+                  </div>
+
+                  <div class="report-details">
+                    <p><img src="/assets/images/employee-dash/audio-icn.svg" alt=""> <span
+                        class="report-details-audio-count">23</span> Audio report</p>
+                    <p><img src="/assets/images/employee-dash/text-icon.svg" alt=""> <span
+                        class="report-details-text-count">03</span> Text report</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const cx = document.getElementById('communicationChart').getContext('2d');
+    new Chart(cx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Audio', 'Text'],
+        datasets: [
+          {
+            data: [87, 13],
+            backgroundColor: ['#0d7377', '#d3f3f4'],
+            borderWidth: 0,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        cutout: '75%',
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/en.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      flatpickr('#date-range-calendar', {
+        mode: 'range',
+        dateFormat: 'd M Y',
+        inline: true,
+        locale: 'en',
+        onChange: function (selectedDates) {
+          console.log('Selected Start Date:', selectedDates[0]);
+          console.log('Selected End Date:', selectedDates[1]);
+        },
+      });
+    });
+  </script>
+  <script>
+    const ctxx = document.getElementById('performanceChart').getContext('2d');
+
+    new Chart(ctxx, {
+      type: 'line',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        datasets: [
+          {
+            label: 'Total Report',
+            data: [50, 70, 40, 60, 90, 80],
+            borderColor: '#0d7377',
+            backgroundColor: 'rgba(13, 115, 119, 0.2)',
+            fill: true,
+            tension: 0.4,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+            position: 'top',
+            labels: {
+              color: '#333',
+            },
+          },
+        },
+        scales: {
+          x: {
+            grid: {
+              display: false,
+            },
+            ticks: {
+              color: '#666',
+            },
+          },
+          y: {
+            grid: {
+              color: '#eaeaea',
+            },
+            ticks: {
+              color: '#666',
+
+            },
+            min: 0,
+            max: 100,
+            stepSize: 30, // Set step size to align with percentages
+          },
+        },
+      },
+    });
+
+
+  </script>
+  <script>
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.wr-tab-content');
+
+    tabLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Remove active class from all links
+        tabLinks.forEach(link => link.classList.remove('active'));
+        // Add active class to clicked link
+        link.classList.add('active');
+
+        // Hide all tab contents
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        // Show current tab content
+        const targetTab = document.getElementById(link.dataset.tab);
+        targetTab.classList.add('active');
+      });
+    });
+
+
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const calendarEl = document.getElementById("calendar");
+
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: "dayGridMonth", // Month view
+
+        headerToolbar: {
+          left: "", // Navigation buttons
+          center: "title", // Title
+          right: "prev,next", // View options
+        },
+        events: [],
+        contentHeight: 300,
+
+        editable: false, // Allow event dragging
+        selectable: true, // Allow date selection
+        height: "auto", // Dynamically adjusts height based on content
+        dayMaxEventRows: false, // Limits the number of events shown per day
+        dayCellClassNames: function (arg) {
+          // Apply the 'fc-sunday' class to Sundays
+          const date = new Date(arg.date);
+          return date.getDay() === 0 ? "fc-sunday" : "";
+        },
+      });
+
+      calendar.render();
+    });
+  </script>
+  <script src="js/script.js"></script>
+
+  <!-- Bootstrap JS -->
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
